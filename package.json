@@ -1,62 +1,67 @@
 {
-  "name": "js-dev-env",
-  "version": "1.0.0",
-  "description": "Basic starter project for JS development (backend and frontend)",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mmierzwa/js-dev-env.git"
-  },
-  "keywords": [
-    "js",
-    "node",
-    "boilerplate"
-  ],
-  "author": "Marek Mierzwa",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mmierzwa/js-dev-env/issues"
-  },
-  "homepage": "https://github.com/mmierzwa/js-dev-env#readme",
-  "dependencies": {
-    "whatwg-fetch": "1.0.0"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.7.0",
-    "babel-register": "^6.26.0",
-    "chai": "^4.1.2",
-    "chalk": "^2.4.1",
-    "cheerio": "^1.0.0-rc.2",
-    "compression": "^1.7.2",
-    "cross-env": "^5.2.0",
-    "css-loader": "^0.28.11",
-    "eslint": "^4.19.1",
-    "eslint-plugin-import": "^2.12.0",
-    "eslint-watch": "^3.1.5",
-    "express": "^4.16.3",
-    "html-webpack-plugin": "^3.2.0",
-    "jsdom": "^11.11.0",
-    "json-schema-faker": "^0.5.0-rc15",
-    "json-server": "^0.14.0",
-    "localtunnel": "^1.9.0",
-    "mocha": "^5.2.0",
-    "nock": "^9.3.3",
-    "npm-run-all": "^4.1.3",
-    "nsp": "^3.2.1",
-    "numeral": "^2.0.6",
-    "open": "0.0.5",
-    "rimraf": "^2.6.2",
-    "style-loader": "^0.21.0",
-    "using": "^1.0.0-alpha-1",
-    "webpack": "^4.12.0",
-    "webpack-dev-middleware": "^3.1.3",
-    "webpack-hot-middleware": "^2.22.2",
-    "webpack-md5-hash": "0.0.6"
-  }
+    "name": "js-dev-env",
+    "version": "1.0.0",
+    "description": "Basic starter project for JS development (rather frontend)",
+    "scripts": {
+        "prestart": "node buildScripts/startMessage.js",
+        "start": "npm-run-all --parallel security-check open:src",
+        "open:src": "node buildScripts/srcServer.js",
+        "security-check": "nsp check",
+        "localtunnel": "lt ---port 1337",
+        "share": "npm-run-all --parallel open:src localtunnel",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mmierzwa/js-dev-env.git"
+    },
+    "keywords": [
+        "js",
+        "node",
+        "boilerplate"
+    ],
+    "author": "Marek Mierzwa",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/mmierzwa/js-dev-env/issues"
+    },
+    "homepage": "https://github.com/mmierzwa/js-dev-env#readme",
+    "dependencies": {
+        "whatwg-fetch": "1.0.0"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.3",
+        "babel-loader": "^7.1.4",
+        "babel-preset-env": "^1.7.0",
+        "babel-register": "^6.26.0",
+        "chai": "^4.1.2",
+        "chalk": "^2.4.1",
+        "cheerio": "^1.0.0-rc.2",
+        "compression": "^1.7.2",
+        "cross-env": "^5.2.0",
+        "css-loader": "^0.28.11",
+        "eslint": "^4.19.1",
+        "eslint-plugin-import": "^2.12.0",
+        "eslint-watch": "^3.1.5",
+        "express": "^4.16.3",
+        "html-webpack-plugin": "^3.2.0",
+        "jsdom": "^11.11.0",
+        "json-schema-faker": "^0.5.0-rc15",
+        "json-server": "^0.14.0",
+        "localtunnel": "^1.9.0",
+        "mocha": "^5.2.0",
+        "nock": "^9.3.3",
+        "npm-run-all": "^4.1.3",
+        "nsp": "^3.2.1",
+        "numeral": "^2.0.6",
+        "open": "0.0.5",
+        "rimraf": "^2.6.2",
+        "style-loader": "^0.21.0",
+        "using": "^1.0.0-alpha-1",
+        "webpack": "^4.12.0",
+        "webpack-dev-middleware": "^3.1.3",
+        "webpack-hot-middleware": "^2.22.2",
+        "webpack-md5-hash": "0.0.6"
+    }
 }
