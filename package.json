@@ -1,0 +1,24 @@
+{
+  "name": "js-dev-env",
+  "version": "1.0.0",
+  "description": "Basic starter project for JS development (backend and frontend)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmierzwa/js-dev-env.git"
+  },
+  "keywords": [
+    "js",
+    "node",
+    "boilerplate"
+  ],
+  "author": "Marek Mierzwa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmierzwa/js-dev-env/issues"
+  },
+  "homepage": "https://github.com/mmierzwa/js-dev-env#readme"
+}
